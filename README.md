@@ -23,7 +23,7 @@ To get started with Grilli, simply clone this repository to your local machine a
 ## Credits 🙌
 
 Grilli would not have been possible without the dedication and hard work of our talented team:
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=30&multiline=true&random=false&width=423&height=140&lines=Omar+Hesham+Hamed;Abdelrahman+Mohamed+Mahmoud;Abdallah+Hamada;Yousef+Khaled+Adham+Aldondety)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=30&multiline=true&random=false&width=423&height=140&lines=Omar+Hesham+Hamed;Abdelrahman+Mohamed+Mahmoud;Abdallah+Hamada;Yousef+Khaled;Adham+Aldondety)](https://git.io/typing-svg)
 
 Special thanks to [codewithshadee](https://github.com/codewithsadee) for the inspiration! 🙌🌟
 
