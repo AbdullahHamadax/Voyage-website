@@ -33,7 +33,7 @@ Ahoy, matey! We welcome contributions from fellow adventurers! Whether you're a 
 
 ## License ⚖️
 
-This project is licensed under the MIT License - see the `LICENSE` file for details. ⚖️
+This project is licensed under the MIT License
 
 ---
 ```
