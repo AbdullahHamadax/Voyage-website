@@ -1,12 +1,12 @@
-# Grilli-Website 🍽️
+# Voyage-Website 🍽️
 
-![Grilli Logo](https://raw.githubusercontent.com/codewithsadee/grilli/e23428321f14d6841067f44901ca90223cbd0ed1/assets/images/logo.svg)
+![Grilli Logo](https://media.discordapp.net/attachments/1188240022722334720/1240013649201074196/PNG.png?ex=66450434&is=6643b2b4&hm=9afb26a0667cc9e6e9c81f28faec8004dc45505a40317dd9d4172f87cb7fd299&=&format=webp&quality=lossless)
 
 ---
 
 ## About 📜
 
-Grilli is a web development project aimed at creating a vibrant and engaging restaurant website. Inspired by tales of adventure and hidden treasures, we've added some special surprises for those with a keen eye and a love for the high seas! 🌊⚓️
+Voyage is a web development project aimed at creating a vibrant and engaging restaurant website. Inspired by tales of adventure and hidden treasures, we've added some special surprises for those with a keen eye and a love for the high seas! 🌊⚓️
 
 ## Features 🌟
 
@@ -18,7 +18,7 @@ Grilli is a web development project aimed at creating a vibrant and engaging res
 
 ## Installation 🛠️
 
-To get started with Grilli, simply clone this repository to your local machine and follow the setup instructions in the `README.md`. 🔧
+To get started with Voyage, simply clone this repository to your local machine and follow the setup instructions in the `README.md`. 🔧
 
 ## Credits 🙌
 
@@ -29,7 +29,7 @@ Special thanks to [codewithshadee](https://github.com/codewithsadee) for the ins
 
 ## Contributing 🏴‍☠️
 
-Ahoy, matey! We welcome contributions from fellow adventurers! Whether you're a seasoned developer or just starting out, there's always room on our crew for those with a passion for good food and great code. Feel free to dive in and contribute to our culinary journey. Together, we can make Grilli the ultimate destination for food adventurers! 🏴‍☠️🍽️
+Ahoy, matey! We welcome contributions from fellow adventurers! Whether you're a seasoned developer or just starting out, there's always room on our crew for those with a passion for good food and great code. Feel free to dive in and contribute to our culinary journey. Together, we can make Voyage the ultimate destination for food adventurers! 🏴‍☠️🍽️
 
 ## License ⚖️
 
@@ -37,5 +37,5 @@ This project is licensed under the MIT License
 
 ---
 ```
-⚓️ Set sail with Grilli and embark on a culinary voyage like no other! Can you uncover the hidden treasures that await? 🍽️🏴‍☠️
+⚓️ Set sail with Voyage and embark on a culinary voyage like no other! Can you uncover the hidden treasures that await? 🍽️🏴‍☠️
 ```
