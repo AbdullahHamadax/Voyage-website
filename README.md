@@ -1,4 +1,4 @@
-# Grilli-Website 🍽️🏴‍☠️
+# Grilli-Website 🍽️
 
 ![Grilli Logo](https://raw.githubusercontent.com/codewithsadee/grilli/e23428321f14d6841067f44901ca90223cbd0ed1/assets/images/logo.svg)
 
