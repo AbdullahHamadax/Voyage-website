@@ -1,6 +1,3 @@
-Got it! Here's your text with emojis added to each section:
-
-```markdown
 # Grilli-Website 🍽️🏴‍☠️
 
 ![Grilli Logo](link/to/logo.png)
@@ -39,6 +36,6 @@ Ahoy, matey! We welcome contributions from fellow adventurers! Whether you're a 
 This project is licensed under the MIT License - see the `LICENSE` file for details. ⚖️
 
 ---
-
+```
 ⚓️ Set sail with Grilli and embark on a culinary voyage like no other! Can you uncover the hidden treasures that await? 🍽️🏴‍☠️
 ```
