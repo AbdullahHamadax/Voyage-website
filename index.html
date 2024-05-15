@@ -4,6 +4,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voyage</title>
+
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Small icon beside website title at the top (favicon) -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
+
+    <link rel="preload" as="image" href="assets/images/hero-slider-1.jpg" />
+    <link rel="preload" as="image" href="assets/images/hero-slider-2.jpg" />
+    <link rel="preload" as="image" href="assets/images/hero-slider-3.jpg" />
   </head>
-  <body></body>
+  <body>
+    <!-- PRELOADER (Loading Screen) -->
+    <div class="preload" data-preaload>
+      <div class="circle"></div>
+      <p class="text">Voyage</p>
+    </div>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="container">
+        <address class="topbar-items">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span"> Voyage Restaurant, Grand Line, JP </span>
+        </address>
+        <div class="separator"></div>
+        <div class="topbar-item item-2">
+          <div class="icon">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">Daily : 8.00 am to 10.00 pm </span>
+        </div>
+        <a href="tel:+11234567890" class="topbar-item">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">+1 123 456 7890 </span>
+        </a>
+
+        <div class="separator"></div>
+
+        <a href="mailto:voyage@gmail.com" class="topbar-item">
+          <div class="icon">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">voyage@gmail.com</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="assets/images/logo.png"
+            width="160"
+            height="50"
+            alt="Voyage - Home"
+          />
+        </a>
+        <nav class="navbar" data-navbar>
+          <button class="close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+          <a href="#" class="logo">
+            <img
+              src="assets/images/logo.png"
+              width="160"
+              height="50"
+              alt="Voyage - Home"
+            />
+          </a>
+
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="" class="navbar-link hover-underline active"></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Custom JS link -->
+    <script src="assets/js/script.js"></script>
+
+    <!--Ionicon link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
