@@ -2,8 +2,7 @@
   # GOOGLE FONT IMPORT
 \*-----------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap");
 /*-----------------------------------*\
   #index.css
 \*-----------------------------------*/
@@ -14,8 +13,7 @@
 
 :root {
   /* Declaring Color Variables IN CSS BASICALLY */
-  --amber-orange: hsl(27, 86%, 57%);
-  --gold-crayola: hsl(38, 61%, 73%);
+  --amber-orange: hsl(37, 58%, 45%);
   --quick-silver: hsla(0, 0%, 65%, 1);
   --davys-grey: hsla(30, 3%, 34%, 1);
   --smoky-black-1: hsla(40, 12%, 5%, 1);
@@ -197,9 +195,117 @@ body.nav-active {
   #TYPOGRAPHY
 \*-----------------------------------*/
 
+.display-1,
+.headline-1,
+.headline-2,
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+  color: var(--white);
+  font-family: var(--fontFamily-forum);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-2);
+}
+.display-1 {
+  font-size: var(--fontSize-display-1);
+  line-height: var(--lineHeight-1);
+}
+.headline-1 {
+  font-size: var(--fontSize-headline-1);
+}
+.headline-2 {
+  font-size: var(--fontSize-headline-2);
+  line-height: var(--lineHeight-6);
+}
+.title-1 {
+  font-size: var(--fontSize-title-1);
+}
+.title-2 {
+  font-size: var(--fontSize-title-2);
+}
+.title-3 {
+  font-size: var(--fontSize-title-3);
+}
+.title-4 {
+  font-size: var(--fontSize-title-4);
+}
+.body-1 {
+  font-size: var(--fontSize-body-1);
+  line-height: var(--lineHeight-6);
+}
+
+.body-2 {
+  font-size: var(--fontSize-body-2);
+  line-height: var(--lineHeight-4);
+}
+.body-3 {
+  font-size: var(--fontSize-body-3);
+}
+.body-4 {
+  font-size: var(--fontSize-body-4);
+}
+.label-1 {
+  font-size: var(--fontSize-label-1);
+}
+.label-2 {
+  font-size: var(--fontSize-label-2);
+}
+
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+
+.container {
+  padding-inline: 16px;
+}
+
+.separator {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--amber-orange);
+  transform: rotate(45deg);
+}
+
+.contact-label {
+  font-weight: var(--weight-bold);
+}
+
+.contact-number {
+  color: var(--amber-orange);
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.hover-underline {
+  position: relative;
+  max-width: max-content;
+}
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  border-block: 1px solid var(--amber-orange);
+  transform: scaleX(0.2);
+  opacity: 0;
+  transition: var(--transition-2);
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.contact-number::after {
+  bottom: -5px;
+}
+
+.text-center {
+  text-align: center;
+}
 
 /*-----------------------------------*\
   #PRELOAD
@@ -211,7 +317,7 @@ body.nav-active {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--gold-crayola);
+  background-color: var(--amber-orange);
   z-index: 10;
   display: grid;
   place-content: center;
@@ -291,6 +397,205 @@ body.nav-active {
   #HEADER
 \*-----------------------------------*/
 
+.header .btn {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding-block: 40px;
+  z-index: 4;
+  border-block-end: 1px solid transparent;
+  transition: var(--transition-1);
+}
+
+.header.active {
+  padding-block: 20px;
+  background: var(--eerie-black-4);
+  border-color: var(--black-alpha-15);
+}
+
+.header.hide {
+  transform: translateY(-100%);
+  transition-delay: 250ms;
+}
+
+.header .container {
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-open-btn {
+  padding: 12px;
+  padding-inline-end: 0;
+}
+
+.nav-open-btn .line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--white);
+  margin-block: 4px; /* to seperate the 3 lines. */
+  transform-origin: left;
+  animation: menuBtn 400ms ease-in-out alternate infinite;
+}
+
+@keyframes menuBtn {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.5);
+  }
+}
+
+.nav-open-btn .line-2 {
+  animation-delay: 150ms;
+}
+
+.nav-open-btn .line-2 {
+  animation-delay: 300ms;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--smoky-black-1);
+  top: 0;
+  left: -360px;
+  bottom: 0;
+  max-width: 360px;
+  width: 100%;
+  padding-inline: 30px;
+  padding-block-end: 50px;
+  overflow-y: auto;
+  visibility: hidden;
+  z-index: 2;
+  transition: var(--transition-2);
+}
+
+.navbar.active {
+  visibility: visible;
+  transform: translateX(360px);
+}
+
+.navbar .close-btn {
+  color: var(--white);
+  border: 1px solid currentColor;
+  padding: 4px;
+  border-radius: var(--radius-circle);
+  margin-inline-start: auto;
+  margin-block: 30px 20px;
+}
+
+.navbar .close-btn ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+.navbar .close-btn:is(:hover, :focus-visible) {
+  color: var(--gold-crayola);
+}
+
+.navbar .logo {
+  max-width: max-content;
+  margin-inline: auto; /* to center it */
+  margin-block-end: 30px; /* originally used 60px */
+}
+
+.navbar-list {
+  border-block-end: 1px solid var(--white-alpha-20);
+  margin-block-end: 100px;
+}
+
+.navbar-item {
+  border-block-start: 1px solid var(--white-alpha-20);
+}
+
+.navbar-link {
+  position: relative;
+  font-size: var(--fontSize-label-2);
+  text-transform: uppercase;
+  padding-block: 10px;
+  max-width: unset;
+}
+
+.navbar-link::after {
+  display: none;
+}
+.navbar-link .span {
+  transition: var(--transition-1);
+}
+.navbar-link:is(:hover, :focus-visible, .active) .span {
+  color: var(--amber-orange);
+  transform: translateX(20px);
+}
+.navbar-link .separator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus-visible, .active) .separator {
+  opacity: 1;
+}
+
+.navbar-title {
+  margin-block-end: 15px;
+}
+.navbar-text {
+  margin-block: 10px;
+}
+.sidebar-link {
+  transition: var(--transition-1);
+}
+
+.navbar .body-4 {
+  color: var(--quick-silver);
+}
+
+/* originally used : is(:hover, :focus-visible) */
+
+.sidebar-link:hover {
+  color: var(--amber-orange);
+}
+
+.navbar .text-center .separator {
+  margin-block: 30px;
+  margin-inline: auto;
+}
+
+.navbar .contact-label {
+  margin-block-end: 10px;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+  background-color: var(--white-alpha-10);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--black-alpha-80);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-2);
+  z-index: 1;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
