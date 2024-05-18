@@ -162,3 +162,15 @@ window.addEventListener("mousemove", function (event) {
     parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
   }
 });
+
+document.querySelector("form").addEventListener("submit", function (e) {
+  const name = document.querySelector("input[name='name']").value;
+  const phone = document.querySelector("input[name='phone']").value;
+  const date = document.querySelector("input[name='reservation-date']").value;
+  const message = document.querySelector("textarea[name='message']").value;
+
+  if (!name || !phone || !date) {
+    alert("Nice try, can you please not leave your data fields empty?");
+    e.preventDefault();
+  }
+});
