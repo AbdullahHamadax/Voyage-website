@@ -507,11 +507,36 @@ body.nav-active {
   color: var(--white);
 }
 
+.shape-1 {
+  top: 100%;
+  left: 75%;
+}
+
 .shape {
-  display: none;
+  display: none; /* Make sure the shapes are displayed */
   position: absolute;
   max-width: max-content;
   z-index: -1;
+  opacity: 0.9; /* Add some transparency */
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); */
+}
+
+.shape-1 {
+  animation: rotateScale 4s infinite alternate;
+}
+
+/* adjust the effect duration */
+
+@keyframes rotateScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 .w-100 {
