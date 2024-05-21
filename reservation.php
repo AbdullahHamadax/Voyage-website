@@ -39,7 +39,7 @@ $sql = "INSERT INTO reservations (name, phone, person, reservation_date, reserva
 VALUES ('$name', '$phone', '$person', '$reservation_date', '$reservation_time', '$message')";
 
 if ($conn->query($sql) === TRUE) {
-    echo readfile("../pages/menu.html");
+    echo "Reservation Successful";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
