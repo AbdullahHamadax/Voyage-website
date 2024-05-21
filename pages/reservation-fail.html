@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              amber_orange: "hsl(37, 58%, 45%)",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Registration Response</title>
+  </head>
+  <body
+    class="bg-[#0e0d0c] flex flex-col min-w-full min-h-screen text-center justify-center items-center bg-[url('/assets/images/monkey-d-luffy-clouds-one-piece-desktop-wallpaper-preview.jpg')]"
+  >
+    <div
+      class="bg-[#161718] rounded-lg flex flex-col gap-5 justify-center items-center w-[500px] h-[300px] border-solid border-white border-2 text-amber_orange"
+    >
+      <p>No available tables for the selected date!! 😔</p>
+      <p>
+        Maximum reservation count for the same date & time is
+        <strong>5.</strong>
+      </p>
+    </div>
+  </body>
+</html>
