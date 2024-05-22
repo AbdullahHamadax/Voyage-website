@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Forum&family=Roboto:wght@400;700&display=swap");
+
+:root {
+    /* COLORS */
+    --primary-color: hsl(37, 58%, 45%); /* Amber Orange */
+    --secondary-color: hsla(0, 0%, 65%, 1); /* Quick Silver */
+    --background-color: rgb(0, 0, 0); /* Eerie Black */
+    --header-background: hsla(0, 0%, 13%, 1); /* Darker Black */
+    --section-background: hsla(180, 2%, 8%, 1); /* Dark Eerie Black */
+    --text-color: hsla(0, 0%, 100%, 1); /* White */
+    --text-muted: hsla(0, 0%, 65%, 1); /* Muted Quick Silver */
+    --highlight-color: hsla(37, 58%, 45%, 0.8); /* Light Amber Orange */
+    --highlight-hover: hsla(0, 0%, 65%, 0.8); /* Light Quick Silver */
+    --header-color: hsla(0, 0%, 90%, 1); /* Light Gray for Headers */
+    
+    /* FONT FAMILY */
+    --font-family-primary: "Roboto", sans-serif;
+    --font-family-secondary: "DM Sans", sans-serif;
+    --font-family-special: "Forum", cursive;
+
+    /* FONT SIZE */
+    --font-size-display-1: calc(1.3rem + 6.7vw);
+    --font-size-headline-1: calc(2rem + 2.5vw);
+    --font-size-headline-2: calc(1.3rem + 2.4vw);
+    --font-size-title-1: calc(1.6rem + 1.2vw);
+    --font-size-title-2: 2.2rem;
+    --font-size-title-3: 2.1rem;
+    --font-size-title-4: calc(1.6rem + 1.2vw);
+    --font-size-body-1: 2.4rem;
+    --font-size-body-2: 1.6rem;
+    --font-size-body-3: 1.8rem;
+    --font-size-body-4: 1.6rem;
+    --font-size-label-1: 1.4rem;
+    --font-size-label-2: 1.2rem;
+
+    /* FONT WEIGHT */
+    --weight-regular: 400;
+    --weight-bold: 700;
+
+    /* LINE HEIGHT */
+    --line-height-1: 1em;
+    --line-height-2: 1.2em;
+    --line-height-3: 1.5em;
+    --line-height-4: 1.6em;
+    --line-height-5: 1.85em;
+    --line-height-6: 1.4em;
+
+    /* LETTER SPACING */
+    --letter-spacing-1: 0.15em;
+    --letter-spacing-2: 0.4em;
+    --letter-spacing-3: 0.2em;
+    --letter-spacing-4: 0.3em;
+    --letter-spacing-5: 3px;
+
+    /* SPACING */
+    --section-space: 70px;
+
+    /* SHADOW */
+    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+
+    /* BORDER RADIUS */
+    --radius-24: 24px;
+    --radius-circle: 50%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-body-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-5);
+    height: 300vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--header-background);
+    text-align: center;
+    padding: 70px 20px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+header h1 {
+    font-family: var(--font-family-special);
+    font-size: var(--font-size-headline-1);
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+header h3 {
+    font-size: var(--font-size-title-2);
+    font-weight: var(--weight-bold);
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.chef-info {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--section-background); /* Change background color */
+    position: relative; /* Add position relative for the separator */
+}
+
+
+.chef-info::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-color); /* Separator color */
+    z-index: -1; /* Push the separator behind content */
+}
+
+.chef-info img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 150px;
+    height: auto;
+    border-radius: var(--radius-circle);
+    box-shadow: var(--shadow-1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.chef-info img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px -5px var(--text-color);
+}
+
+
+
+.chef-details {
+    margin-bottom: 40px;
+}
+
+.chef-details h3 {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-title-3);
+    color: var(--header-color);
+    margin-bottom: 20px;
+}
+
+.chef-details p {
+    font-family: var(--font-family-special);
+    font-size: var(--font-size-body-3);
+    color: var(--header-color);
+    margin-bottom: 20px;
+}
+
+.other-chefs {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--section-background);
+}
+
+.other-chefs .chef-profile {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.other-chefs .chef-profile img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 150px;
+    height: auto;
+    border-radius: var(--radius-circle);
+    box-shadow: var(--shadow-1);
+    transition: transform 0.3s ease;
+}
+
+.other-chefs .chef-profile img:hover {
+    transform: scale(1.05);
+}
+
+.tree {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 50px 0;
+    background-color:black ;
+    
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.tree li {
+    display: inline-table;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 10px 5px;
+    transition: 0.5s;
+}
+
+.tree li:before,
+.tree li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid var(--text-color);
+    width: 50%;
+    height: 20px;
+}
+
+.tree li:after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid var(--text-color);
+}
+
+.tree li:only-child:after,
+.tree li:only-child:before
+{
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child:before,
+.tree li:last-child:after {
+    border: none;
+}
+
+.tree li:last-child:before {
+    border-right: 1px solid var(--text-color);
+    border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child:after {
+    border-radius: 5px 0 0 0;
+}
+
+.tree ul ul:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid var(--text-color);
+    width: 0;
+    height: 20px;
+}
+
+.tree a {
+    border: 1px solid var(--text-color);
+    padding: 15px;
+    display: inline-grid;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    background-color: var(--header-background);
+}
+
+.tree a:hover {
+    background-color: var(--highlight-hover);
+    box-shadow: 0px 0px 8px -5px var(--text-color);
+}
+
+.tree a img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: var(--radius-circle);
+}
+
+.tree a span {
+    color: var(--secondary-color);
+    font-size: var(--font-size-label-2);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-1);
+    font-weight: var(--weight-bold);
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add this to establish a stacking context */
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/Chef-Background'), url('/assets/images/Chef-Background'); /* Add your image paths here */
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 0.6s ease-out; /* Add transition for smooth crossfade */
+    z-index: -1; /* Send the background behind other content */
+}
+
+.wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/Chef-Background2.jpg'), url('/assets/images/Chef-Background2.jpg'); /* Add your image paths here */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-out; /* Add transition for smooth crossfade */
+    z-index: -2; /* Send the background behind other content */
+}
+
+.wrapper:hover::before {
+    opacity: 0;
+}
+
+.wrapper:hover::after {
+    opacity: 1;
+}
+
+
+.image {
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-24);
+    box-shadow: var(--shadow-1);
+}
+
+.image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.image:hover .content {
+    opacity: 1;
+}
+
+.content h1 {
+    font-size: var(--font-size-title-1);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: var(--font-size-body-3);
+    color: var(--text-color);
+}
+
+.content > * {
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
+.image:hover .content > * {
+    transform: translateY(0);
+}
+
+.amr_daba_tree:hover {
+    background-color: var(--black-alpha-80);
+}
+
+#abdullah-hamada-tree:hover,
+#omar-hesham-tree:hover,
+#youssef-khaled-tree:hover,
+#abdelrahman-mohamed-tree:hover,
+#adham-eldontety-tree:hover {
+    background-color: var(--highlight-hover);
+}
