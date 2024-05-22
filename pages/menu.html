@@ -19,22 +19,114 @@
       padding: 0;
       overflow-y: auto;
     }
+
+
     .container {
       padding-bottom: 100px; /* Ensure there's extra space at the bottom for scrolling */
     }
-    .menu-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      transition: box-shadow 0.3s ease;
-    }
-    .menu-card:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+    
+    
+    .wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Add this to establish a stacking context */
+}
+
+
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/bg-cooking.jpg"),
+    url("/assets/images/bg-cooking.jpg"); /* Add your image paths here */
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 0.6s ease-out; /* Add transition for smooth crossfade */
+  z-index: -1; /* Send the background behind other content */
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/bg-cooking2.jpg"),
+    url("/assets/images/bg-cooking2.jpg"); /* Add your image paths here */
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-out; /* Add transition for smooth crossfade */
+  z-index: -2; /* Send the background behind other content */
+}
+
+.wrapper:hover::before {
+  opacity: 0;
+}
+
+.wrapper:hover::after {
+  opacity: 1;
+}
+
+.image {
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: var(--shadow-1);
+}
+
+.image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.image:hover .content {
+  opacity: 1;
+}
+.content p {
+  font-size: 3rem;
+  color: white;
+}
+
+.content > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+.image:hover .content > * {
+  transform: translateY(0);
+}
+  
     .card-banner {
       width: 100px;
       height: 100px;
@@ -83,12 +175,20 @@
     }
   </style>
 </head>
-<body>
+<body>  
+  <div class="wrapper">
+    <div class="image">
+      <img src="../assets/images/logo.png" alt="Logo" />
+      <div class="content">
+        <p>Menu</p>
+      </div>
+    </div>
+  </div>
   <section class="section menu" aria-label="menu-label" id="menu">
     <div class="container">
-      <p class="section-subtitle text-center label-2">Our Menu</p>
+      <p class="text-center section-subtitle label-2">Our Menu</p>
       <section class="Meals" aria-label="Meals-label" id="Meals">
-      <h2 class="headline-1 section-title text-center">Meals</h2>
+      <h2 class="text-center headline-1 section-title">Meals</h2>
       <ul class="grid-list">
         <li>
           <div class="menu-card hover:card">
@@ -263,7 +363,7 @@
       </section>
 
       <section class="Drinks" aria-label="Drinks-label" id="Drinks">
-      <h2 id="Drinks" class="headline-1 section-title text-center">Drinks</h2>
+      <h2 id="Drinks" class="text-center headline-1 section-title">Drinks</h2>
       <ul class="grid-list">
 
         <li>
@@ -335,7 +435,7 @@
       </section>
 
       <section class="Desserts" aria-label="Desserts-label" id="Desserts"></section>
-      <h2 class="headline-1 section-title text-center">Desserts</h2>
+      <h2 class="text-center headline-1 section-title">Desserts</h2>
       <ul class="grid-list">
 
         <li>
@@ -395,7 +495,7 @@
         </li>
         </section>
       </ul>
-      <p class="menu-text text-center">
+      <p class="text-center menu-text">
         During winter daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
       </p>
     </div>
