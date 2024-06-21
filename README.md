@@ -2,7 +2,7 @@
 Voyage-Website 🍽️
 </h1>
 <p align="center">
-  <img src="https://media.discordapp.net/attachments/1188240022722334720/1240013649201074196/PNG.png?ex=66450434&is=6643b2b4&hm=9afb26a0667cc9e6e9c81f28faec8004dc45505a40317dd9d4172f87cb7fd299&=&format=webp&quality=lossless" alt="Voyage Logo">
+  <img src="https://github.com/AbdullahHamadax/Voyage-website/blob/main/assets/images/logo.png" alt="Voyage Logo">
 </p>
 
 
