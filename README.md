@@ -20,6 +20,14 @@ Voyage is a web development project aimed at creating a vibrant and engaging res
 - **Customer Reviews:** Hear from satisfied customers who have embarked on their own culinary journey with us. 🗣️👥
 - **Why Choose Us:** Discover what sets Voyage apart and why we're the ultimate destination for food adventurers. 🌟🍽️
 
+## Technologies Used 🌟
+
+- HTML
+- CSS
+- JS
+- PHP
+- TailwindCSS
+
 ## Installation 🛠️
 
 To get started with Voyage, simply clone this repository to your local machine and follow the setup instructions in the `README.md`. 🔧
